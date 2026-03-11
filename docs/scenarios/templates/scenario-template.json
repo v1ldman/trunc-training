@@ -1,0 +1,47 @@
+{
+  "id": "scenario-xxx",
+  "title": "Role: short factual summary",
+  "dealType": "private_swedish_share_acquisition",
+  "sector": "saas",
+  "dealSizeBand": "mid_cap",
+  "userRole": "buyer_counsel",
+  "counterpartyStyle": "cooperative",
+  "riskProfile": "moderate_flags",
+  "timelinePressure": "normal",
+  "mandate": {
+    "clientObjectives": [
+      "Objective 1",
+      "Objective 2"
+    ],
+    "redLines": [
+      "Red line 1",
+      "Red line 2"
+    ]
+  },
+  "targetModules": [
+    "purchase_price_mechanism",
+    "limitations_of_liability"
+  ],
+  "dynamicEvents": [
+    {
+      "trigger": "after_round_2",
+      "event": "New DD issue discovered",
+      "impactHint": "Adjust indemnity scope and limitation package"
+    },
+    {
+      "trigger": "after_round_4",
+      "event": "Client priority changes",
+      "impactHint": "Re-prioritize concessions"
+    }
+  ],
+  "scoringAnchors": {
+    "strongSignals": [
+      "Signal 1",
+      "Signal 2"
+    ],
+    "commonErrors": [
+      "Error 1",
+      "Error 2"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "scenario-002",
+  "title": "Seller counsel: manufacturing completion accounts with disclosure pressure",
+  "dealType": "private_swedish_share_acquisition",
+  "sector": "manufacturing",
+  "dealSizeBand": "small_cap",
+  "userRole": "seller_counsel",
+  "counterpartyStyle": "inconsistent",
+  "riskProfile": "clean",
+  "timelinePressure": "normal",
+  "mandate": {
+    "clientObjectives": [
+      "Narrow warranty scope to business-critical items",
+      "Keep post-closing purchase price adjustment disputes bounded"
+    ],
+    "redLines": [
+      "No open-ended indemnity for general compliance matters",
+      "No uncapped buyer rights tied to subjective accounting standards"
+    ]
+  },
+  "targetModules": [
+    "purchase_price_mechanism",
+    "limitations_of_liability",
+    "conditions_precedent"
+  ],
+  "dynamicEvents": [
+    {
+      "trigger": "after_round_1",
+      "event": "Buyer introduces broad MAC-style completion condition",
+      "impactHint": "Push objective thresholds and carve-outs"
+    },
+    {
+      "trigger": "after_round_3",
+      "event": "Management flags potential inventory valuation discrepancy",
+      "impactHint": "Revisit adjustment formula drafting precision"
+    }
+  ],
+  "scoringAnchors": {
+    "strongSignals": [
+      "User narrows conditions precedent using objective criteria",
+      "User preserves balance between disclosure sufficiency and seller certainty"
+    ],
+    "commonErrors": [
+      "User accepts ambiguous accounting definitions",
+      "User fails to isolate completion mechanics dispute procedure"
+    ]
+  }
+}
