@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SwedishMnaTrainingScenario",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "dealType",
+    "sector",
+    "dealSizeBand",
+    "userRole",
+    "counterpartyStyle",
+    "riskProfile",
+    "timelinePressure",
+    "mandate",
+    "targetModules",
+    "dynamicEvents",
+    "scoringAnchors"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "dealType": {
+      "type": "string",
+      "enum": ["private_swedish_share_acquisition"]
+    },
+    "sector": { "type": "string" },
+    "dealSizeBand": {
+      "type": "string",
+      "enum": ["small_cap", "mid_cap", "large_cap"]
+    },
+    "userRole": {
+      "type": "string",
+      "enum": ["buyer_counsel", "seller_counsel"]
+    },
+    "counterpartyStyle": {
+      "type": "string",
+      "enum": ["cooperative", "aggressive", "inconsistent"]
+    },
+    "riskProfile": {
+      "type": "string",
+      "enum": ["clean", "moderate_flags", "red_flag_heavy"]
+    },
+    "timelinePressure": {
+      "type": "string",
+      "enum": ["normal", "compressed"]
+    },
+    "mandate": {
+      "type": "object",
+      "required": ["clientObjectives", "redLines"],
+      "properties": {
+        "clientObjectives": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "redLines": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    },
+    "targetModules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "definitions",
+          "purchase_price_mechanism",
+          "warranties_indemnities",
+          "limitations_of_liability",
+          "covenants",
+          "conditions_precedent",
+          "termination_remedies",
+          "dispute_mechanics"
+        ]
+      },
+      "minItems": 1
+    },
+    "dynamicEvents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trigger", "event", "impactHint"],
+        "properties": {
+          "trigger": { "type": "string" },
+          "event": { "type": "string" },
+          "impactHint": { "type": "string" }
+        }
+      }
+    },
+    "scoringAnchors": {
+      "type": "object",
+      "required": ["strongSignals", "commonErrors"],
+      "properties": {
+        "strongSignals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "commonErrors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

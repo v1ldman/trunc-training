@@ -1,0 +1,48 @@
+{
+  "id": "scenario-001",
+  "title": "Buyer counsel: SaaS locked-box negotiation under compressed timeline",
+  "dealType": "private_swedish_share_acquisition",
+  "sector": "saas",
+  "dealSizeBand": "mid_cap",
+  "userRole": "buyer_counsel",
+  "counterpartyStyle": "aggressive",
+  "riskProfile": "moderate_flags",
+  "timelinePressure": "compressed",
+  "mandate": {
+    "clientObjectives": [
+      "Preserve locked-box pricing certainty",
+      "Secure leakage protections and robust warranty package"
+    ],
+    "redLines": [
+      "No uncapped exposure for buyer on known flagged tax risk",
+      "No removal of fundamental warranties"
+    ]
+  },
+  "targetModules": [
+    "purchase_price_mechanism",
+    "warranties_indemnities",
+    "limitations_of_liability"
+  ],
+  "dynamicEvents": [
+    {
+      "trigger": "after_round_2",
+      "event": "New DD reveals consultant misclassification risk in key market",
+      "impactHint": "Reassess indemnity ask and time limits"
+    },
+    {
+      "trigger": "after_round_4",
+      "event": "Client asks whether to trade warranty breadth for lower escrow",
+      "impactHint": "Evaluate economics vs enforceability"
+    }
+  ],
+  "scoringAnchors": {
+    "strongSignals": [
+      "User ties leakage drafting to specific factual risk",
+      "User proposes reciprocal concession structure rather than unilateral movement"
+    ],
+    "commonErrors": [
+      "User treats locked-box and completion account mechanics as interchangeable",
+      "User concedes on key liability limitation terms without mandate check"
+    ]
+  }
+}
